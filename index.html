@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device=device-width, initial-scale=1">
+    <title>臺灣產業新勢力</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="cart" id="cart" onclick="leave()"></div>
+    <div class="cart-content">
+      <div class="cart-intro">
+        <h2 class="display-2">購物車</h2>
+        <h3 class="display-3">您購買的商品都會在這</h3>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-cancel">取消</div><img src="img/dessert17.jpg" alt="">
+        <h3>傳統壓製冰棒</h3>
+        <h4>涼水工作室</h4>
+        <h3 class="price">NT$300</h3>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-cancel">取消</div><img src="img/3C10.jpg" alt="">
+        <h3>輕鬆舒適智慧表</h3>
+        <h4>書蟲工作室</h4>
+        <h3 class="price">NT$6300</h3>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-cancel">取消</div><img src="img/dessert24.jpg" alt="">
+        <h3>甜蜜當日糕點</h3>
+        <h4>高立工作室</h4>
+        <h3 class="price">NT$500</h3>
+      </div>
+      <div class="cart-footer">
+        <h2>結帳</h2>
+        <h3>總金額</h3>
+        <h2 class="price">NT$7100</h2><a class="btn btn--ghost btn--block btn--dark" onclick="error()">結帳</a>
+      </div>
+    </div>
+    <nav class="nav-main" id="navMain">
+      <div class="nav-left">
+        <h1 class="logo"><a href="#hero">臺灣產業新勢力</a></h1>
+        <ul class="list-main">
+          <li><a href="#hero">產業崛起</a></li>
+          <li><a href="#guide">快速導覽</a></li>
+          <li><a href="#store">瀏覽商城</a></li>
+          <li><a href="#topic">讀話題</a></li>
+        </ul>
+      </div>
+      <ul class="list-extra">
+        <li><a href="#cart">購物車(3)</a></li>
+        <li><a href="#footer-about">關於我們</a></li>
+        <li><a class="point" href="#footer-news">訂閱電子報</a></li>
+      </ul>
+    </nav>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="hero-content">
+            <div class="hero-inner">
+              <h2 class="display-1">台灣產業的實力迎擊</h2>
+              <h3 class="display-2">新世紀的到來、新勢力的崛起</h3>
+            </div>
+            <div class="button-group"><a class="btn btn--ghost-main" href="#about">關於我們</a><a class="btn btn--ghost" href="#store">瀏覽商城</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="guide" id="guide">
+      <div class="container">
+        <div class="row flex-dir-col">
+          <div class="section-intro">
+            <h2 class="display-2">快速導覽</h2>
+            <h3 class="display-3">網站架構快速一覽</h3>
+          </div>
+          <div class="gallery"><a class="gallery-item grid-lg obj-bottom" href="#about">
+              <div class="gallery-img"><img src="img/sport38.jpg" alt=""></div>
+              <div class="gallery-content">
+                <h3>臺灣產業，起步</h3>
+                <h4>進一步了解我們的故事</h4>
+                <hr>
+                <p>詳細了解更多“台灣產業新勢力”的堅持、努力，以及希望為大眾帶來的服務等...</p>
+              </div></a><a class="gallery-item grid-ln" href="#contact-form">
+              <div class="gallery-img"><img src="img/bg26.jpg" alt=""></div>
+              <div class="gallery-content">
+                <h3>聯絡我們</h3>
+                <h4>給予意見反饋</h4>
+                <hr>
+                <p>您的意見反饋可以幫助我們做得更好。</p>
+              </div></a><a class="gallery-item" href="#store">
+              <div class="gallery-img"><img src="img/bg11.jpg" alt=""></div>
+              <div class="gallery-content">
+                <h3>全新商品</h3>
+                <h4>最新最棒的商品就在這裡</h4>
+                <hr>
+              </div></a><a class="gallery-item" href="#store">
+              <div class="gallery-img"><img src="img/music15.jpg" alt=""></div>
+              <div class="gallery-content">
+                <h3>全部商品</h3>
+                <h4>隨意瀏覽逛逛也是個好選擇</h4>
+                <hr>
+              </div></a><a class="gallery-item" href="#win">
+              <div class="gallery-img"><img src="img/music17.jpg" alt=""></div>
+              <div class="gallery-content">
+                <h3>銷售排行榜</h3>
+                <h4>我們的前三銷售冠軍，最受肯定喜愛的商品</h4>
+                <hr>
+              </div></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-content">
+            <div class="section-intro">
+              <h2 class="display-2">關於我們</h2>
+              <h3 class="display-3">了解我們品牌背後的故事</h3>
+            </div>
+            <div class="about-inner">
+              <h3>便利的網路世代，改變你我的生活</h3>
+              <p>
+                這是一個講求效率的世代，網路的普及發展已超過前人所想像的速度向前發展，多次的網頁架構風潮興衰，像是從形象網站到拍賣網站，再接著是「無民小站」等
+                部落格連帶影響了創作者生涯的起起落落，多次的風潮而去我們不禁深思如何去實現這個理想──<br>
+                <h4>“建立一個消費者便利採購，產業努力於開發”</h4>以上理念即是是產業勢力一直的指標。
+              </p><br>
+              <h3>為什麼選擇我們</h3>
+              <p>在這裡我們有自己堅守的原則，也是顧客數年來肯定我們的核心價值，方便的購物、便利的形象宣傳、建立</p>
+              <div class="pros">
+                <div class="pro">
+                  <h3>總顧客人數</h3>
+                  <h2>總人數<br>12400<sup> 人</h2>
+                </div>
+                <div class="pro">
+                  <h3>好評率</h3>
+                  <h2>上升<br>25<sup> %</h2>
+                </div>
+                <div class="pro">
+                  <h3>經手商家</h3>
+                  <h2>總共<br>430<sup> 家</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="store" id="store">
+      <div class="container">
+        <div class="row flex-start">
+          <div class="side">
+            <h2>商品分類</h2>
+            <ul class="type list-horiz">
+              <li>電子類</li>
+              <li>食品類</li>
+              <li>機能類</li>
+              <li>隨身小物</li>
+            </ul>
+            <h2>銷售排行榜</h2>
+            <ul class="win" id="win">
+              <li>
+                <div class="num">1.</div>
+                <h3>給你的優質耳機</h3>
+                <h4>立方工作室</h4>
+                <p>舒活耳機又再次奪下這次的銷售競爭排行，平實的價格、樸實的機能性廣受喜愛。</p>
+              </li>
+              <li>
+                <div class="num">2.</div>
+                <h3>戀愛般的甜蜜體驗</h3>
+                <h4>高立工作室</h4>
+                <p>
+                  以手工當日製作、主打獨家配方的高立工作室，吃完他們的糕點總是讓人沉浸在戀愛般的幸福感之中。</p>
+              </li>
+              <li>
+                <div class="num">3.</div>
+                <h3>一個拓荒者該有的背包</h3>
+                <h4>開拓工作室</h4>
+                <p>
+                  開拓工作室全新商品系列─開拓者，時尚的外型、多功能適合外出的設計是每個拓荒者應該擁有的最好配備。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="shop-wrapper">
+            <div class="section-intro">
+              <h2 class="display-2">線上商城</h2>
+              <h3 class="display-3">臺灣產業的新血，各產業優質的原創商品</h3>
+            </div>
+            <div class="shop-gallery"><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/3C8.jpg" alt=""><img src="img/3C9.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>機能好舒活耳機</h3>
+                  <h4>立方工作室</h4>
+                  <h3 class="price">NT$3300 / 個<br>線材另購</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/3C10.jpg" alt=""><img src="img/3C13.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>輕鬆舒適智慧表</h3>
+                  <h4>書蟲工作室</h4>
+                  <h3 class="price">NT$6300 / 個</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/3C3.jpg" alt=""><img src="img/3C4.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>威力真重音耳機</h3>
+                  <h4>力量工作室</h4>
+                  <h3 class="price">NT$8300 / 個</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/dessert24.jpg" alt=""><img src="img/dessert37.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>甜蜜當日糕點</h3>
+                  <h4>高立工作室</h4>
+                  <h3 class="price">NT$500 / 塊<br>客製化</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/dessert30.jpg" alt=""><img src="img/dessert39.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>樂活享食水果禮盒</h3>
+                  <h4>書蟲工作室</h4>
+                  <h3 class="price">NT$1300 / 盒<br>可點選細項種類</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/dessert17.jpg" alt=""><img src="img/dessert18.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>傳統壓製冰棒</h3>
+                  <h4>涼水工作室</h4>
+                  <h3 class="price">NT$300 / 盒</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/sport21.jpg" alt=""><img src="img/sport20.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>個性衝鋒滑板</h3>
+                  <h4>性格工作室</h4>
+                  <h3 class="price">NT$8100 / 個<br>客製化</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/pack10.jpg" alt=""><img src="img/pack9.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>探險者 V.01</h3>
+                  <h4>開拓工作室</h4>
+                  <h3 class="price">NT$4300 / 個</h3>
+                </div></a><a class="shop-item" href="#cart">
+                <div class="shop-img"><img src="img/pack2.jpg" alt=""><img src="img/pack11.jpg" alt=""></div>
+                <div class="shop-content">
+                  <h3>真皮辦公背包</h3>
+                  <h4>方木工作室</h4>
+                  <h3 class="price">NT$8300 / 個</h3>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="topic" id="topic">
+      <div class="container">
+        <div class="row flex-dir-col">
+          <div class="section-intro">
+            <h2 class="display-2">讀話題</h2>
+            <h3 class="display-3">最新的產業趨勢就在這</h3>
+          </div>
+          <div class="topic-wrapper">
+            <div class="topic-item">
+              <div class="topic-img"><img src="img/cookie3.jpg" alt=""></div>
+              <div class="topic-content">
+                <h2>文創產業市集</h2>
+              </div>
+              <div class="topic-hide">
+                <h2>文創產業市集</h2>
+                <p>我們與好點子市集一同舉辦了「文創產業心元年」市集活動，快來共襄盛舉吧！</p><a class="btn btn--ghost-main" href="https://twitter.com">Twitter活動頁面</a>
+              </div>
+            </div>
+            <div class="topic-item">
+              <div class="topic-img"><img src="img/music4.jpg" alt=""></div>
+              <div class="topic-content">
+                <h2>臺灣產業筆記欄</h2>
+              </div>
+              <div class="topic-hide">
+                <h2>臺灣產業筆記欄</h2>
+                <p>對於台灣產業我們略有調查，同時也有免費的電子月刊定閱。歡迎每周過來觀看最新的產業探討資訊。</p><a class="btn btn--ghost-main" href="https://plurk.com">Plurk部落格</a>
+              </div>
+            </div>
+            <div class="topic-item">
+              <div class="topic-img"><img src="img/bg13.jpg" alt=""></div>
+              <div class="topic-content">
+                <h2>電子業的一道閃光</h2>
+              </div>
+              <div class="topic-hide">
+                <h2>電子業的一道閃光</h2>
+                <p>電子在台是產值數一數二的龍頭產業，我們邀請了多家知名電子廠商進行交流合作的午後茶會</p><a class="btn btn--ghost-main" href="https//facebook.com">Facebook粉絲專頁</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-content">
+            <div class="footer-item footer-about" id="footer-about">
+              <h2>關於我們</h2>
+              <h1 class="logo"><a href="#hero">臺灣產業新勢力</a></h1>
+              <p>
+                我們是一個致力於推廣台灣產業品牌的媒體線上網頁平台。顧客能快速找到想要的，創作者、公司能有個輕鬆的管道便利行銷自家產品及是我們的核心目標。</p>
+              <ul class="social">
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="footer-item footer-nav">
+              <h2>快速導覽</h2>
+              <ul class="list-horiz">
+                <li><a href="#hero">產業崛起</a></li>
+                <li><a href="#guide">快速導覽</a></li>
+                <li><a href="#store">瀏覽商城</a></li>
+                <li><a href="#topic">讀話題</a></li>
+              </ul>
+            </div>
+            <div class="footer-item footer-news" id="footer-news">
+              <h2>訂閱電子報</h2>
+              <p>
+                定閱我們每月一期的「產業勢力月刊」，帶您了解該月臺灣最有影響力的產業新勢力。</p>
+              <form>
+                <input type="email" placeholder="輸入您的電子信箱">
+                <button class="btn btn--ghost btn--block btn--dark" onclick="send()">送出</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container-fluid">
+        <div class="row"><a class="half side-choice" href="#contact-form">
+            <div class="side-img"><img src="img/bg3.jpg"></div>
+            <div class="side-content">
+              <h2>聯絡我們</h2>
+              <h3>您的想法，可以幫助我們做得更好</h3>
+            </div></a><a class="half side-choice" href="https://facebook.com">
+            <div class="side-img"><img src="img/bg2.jpg"></div>
+            <div class="side-content">
+              <h2>更多資訊</h2>
+              <h3>想要了解更多「臺灣產業新勢力」，請進入我們的<br>Facebook粉絲團</h3>
+            </div></a></div>
+      </div>
+    </section>
+    <section class="contact-form" id="contact-form">
+      <div class="container">
+        <div class="row">
+          <form>
+            <h2 class="display-2">聯絡表單</h2>
+            <h3 class="display-3">您的想法幫助我們做得更好</h3>
+            <label id="name">姓名</label>
+            <input for="name" type="text" placeholder="請輸入您的姓名">
+            <label id="email">電子信箱</label>
+            <input for="email" type="text" placeholder="請輸入您的電子信箱">
+            <label id="phone">電話</label>
+            <input for="phone" type="text" placeholder="請輸入您的電話">
+            <label id="des">意見</label>
+            <textarea for="des" placeholder="您寶貴的意見"></textarea>
+            <button class="btn btn--ghost btn--block" onclick="send()">送出</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="footer-copyright"><small>臺灣產業新勢力</small><br><small>2018 / 12 / 5 || All Right Reserved.</small></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

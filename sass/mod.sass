@@ -1,0 +1,102 @@
+//type
+.display-1
+  font-family: $ff-spe
+  font-size: 2.5rem
+
+.display-2
+  font-family: $ff-spe
+  font-size: 1.5rem
+
+.display-3
+  font-family: $ff-spe
+  font-size: 1.3rem
+
+.price
+  font-family: $ff-sans
+  color: green
+
+.num
+  left: -20px
+  position: absolute
+  float: left
+  font-size: 1.3rem
+  margin: .5rem
+
+//main
+.list-horiz
+  li
+    &:hover
+      &::before
+        width: 10px
+
+    &::before
+      display: inline-block
+      content: ''
+      width: 0
+      height: 3px
+      background: $dark
+      margin-right: .5rem
+      vertical-align: middle
+      transition: .3s
+
+  a
+    color: $dark
+
+.section-intro
+  position: relative
+  padding: 2rem 0
+  text-align: center
+
+.btn
+  display: inline-block
+  font-family: $ff-sans
+  white-space: nowrap
+  font-weight: bold
+  background: transparent
+  border: 0
+  border: .08rem solid
+  border-radius: 5px
+  padding: .4rem 1rem
+  margin: 1rem
+  transition: .3s
+  &:hover
+    +shadow-mid
+    transform: scale(1.05)
+  +clickable
+
+  &--ghost
+    border-color: $light
+    color: $light
+    &:hover
+      background: $light
+      color: $dark
+
+  &--dark
+    color: $dark
+    border-color: $dark
+    &:hover
+      background: $dark
+      color: $light
+
+
+  &--ghost-main
+    border-color: $main
+    color: $main
+    &:hover
+      background: $main
+      color: $dark
+
+  &--block
+    text-align: center
+    display: block
+    width: 100%
+    margin: 1rem 0
+
+
+
+//tool
+.flex-dir-col
+  flex-direction: column
+
+.flex-start
+  align-items: flex-start

@@ -1,0 +1,60 @@
+$ff-serif: "Kozuka Mincho Pr6n", serif
+$ff-sans: "Kozuka Gothic Pr6n", serif
+$ff-spe: "文鼎魏碑", sans-serif
+
+$main: #DDBB2C
+$main-2: #0F456D
+$light: #EDE6E6
+$dark: #0A0C1E
+
+$trans-light-2: hsla(0, 100%, 100%, .2)
+$trans-light-3: hsla(0, 100%,100%, .1)
+$trans-dark: rgba(0,0,0,.8)
+$trans-dark-2: rgba(0,0,0,.4)
+$trans-dark-3: rgba(0,0,0,.1)
+$trans-dark-4: rgba(0,0,0,.05)
+
+$gradient: radial-gradient($trans-dark-2, $trans-dark)
+
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin trans-center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+@mixin bg-dark
+  position: relative
+  z-index: 10
+
+  &::after
+    content: ''
+    z-index: -10
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $gradient
+
+@mixin clickable
+  cursor: pointer
+  &:active
+    transform: scale(.95)
+
+@mixin shadow-light
+  box-shadow: 0 0 10px $trans-dark-3
+
+@mixin shadow-mid
+  box-shadow: 0 0 10px $trans-dark-2
+
+@mixin clear-fix
+
+  &::after
+    content: ''
+    display: block
+    clear: both

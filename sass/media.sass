@@ -1,0 +1,66 @@
+$media-sm: 600px
+$media-md: 1200px
+
+@media only screen and(max-width: $media-md)
+  html
+    font-size: calc(10px + .5vw)
+
+  .nav-main
+    flex-direction: column
+  .nav-left
+    flex-direction: column
+
+  .logo
+    margin: 0
+    padding: 1.5rem
+  .list-main
+    display: none
+
+  .list-extra
+    display: none
+
+  .grid-lg
+    grid-row-end: -1
+    grid-column-end: -1
+
+  .grid-ln
+    grid-column-end: -1
+
+  .side
+    transform: scale(.95)
+    width: 100%
+
+  .container
+    width: 100%
+
+  .container-fluid
+    width: 100%
+
+  .row
+    flex-direction: column
+
+  .half
+    width: 100%
+
+  .shop-gallery
+    margin: 2rem
+
+  .topic-wrapper
+    flex-direction: column
+    margin: 2rem
+
+  .footer-content
+    flex-direction: column
+
+  .footer-item
+    border-top: 1px solid $trans-dark-3
+
+@media only screen and(max-width: $media-sm)
+  html
+    font-size: calc(12px + .5vw)
+
+  .list-main
+    text-align: center
+
+    li
+      display: block

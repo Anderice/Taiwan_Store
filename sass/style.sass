@@ -1,0 +1,639 @@
+@import vars
+@import structure
+@import mod
+@import bg
+@import keyframes
+
+*, *::before, *::after
+  box-sizing: inherit
+
+html
+  scroll-behavior: smooth
+  font-family: $ff-serif
+  font-size: calc(7px + .5vw)
+  letter-spacing: 2px
+  line-height: 1.6
+  box-sizing: border-box
+
+body
+  background: $light
+  position: relative
+  z-index: -50
+
+h1,h2,h3,h4,h5,h6,p,body,ul,ol
+  margin: 0
+  padding: 0
+
+ul,ol
+  list-style-type: none
+
+a
+  text-decoration: none
+
+hr
+  border: 0
+  border-bottom: 0.08rem solid $trans-light-3
+
+input, textarea
+  outline: 0
+  border: 0
+  border-bottom: .08rem solid $trans-dark-3
+  padding: .8rem
+  margin: 1rem 0
+  width: 100%
+
+  &:focus
+    outline: 1px solid $main
+
+textarea
+  min-height: 80px
+
+.cart
+  display: none
+  z-index: 300
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $trans-dark
+  animation: fade-in 2s
+
+  &:target
+    display: block
+
+    ~div
+      display: block
+
+
+.cart-content
+  overflow: auto
+  display: none
+  z-index: 301
+  position: fixed
+  width: 30%
+  height: 100%
+  padding: 2rem
+  background: $light
+  animation: fade-in 1s
+
+.cart-intro
+  border-bottom: 1px solid $trans-dark-3
+  padding-bottom: 2rem
+
+.cart-item
+  position: relative
+  +clear-fix
+  margin: .5rem
+  padding: 1rem
+  border-bottom: 1px solid $trans-dark-3
+  transition: .3s
+  border-radius: 5px
+  &:hover
+    background: white
+    .cart-item-cancel
+      display: block
+  img
+    border-radius: 5px
+    margin-right: 1rem
+    width: 200px
+    max-height: 200px
+    object-fit: cover
+    float: left
+
+  h4
+    color: gray
+
+.cart-item-cancel
+  display: none
+  position: absolute
+  bottom: 1rem
+  right: 1rem
+  color: gray
+  animation: fade-in .5s
+
+
+.cart-footer
+
+
+
+.nav-main
+  z-index: 200
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+  animation: fade-in 2s
+  transition: .3s
+
+  &:hover
+    +shadow-light
+    background: white
+    a
+      color: $dark
+
+    .logo
+      a
+        font-size: 1.7rem
+    .list-main
+      display: block
+    .list-extra
+      display: block
+
+  li
+    display: inline-block
+    transition: .3s
+  a
+    white-space: nowrap
+    padding: 1rem
+    margin: -1rem
+    color: $light
+    transition: .3s
+
+.nav-left
+  +flex-center
+
+.logo
+  animation: fade-in .5s
+  margin-right: 2rem
+  font-family: $ff-spe
+
+  a
+
+
+.list-main
+  animation: fade-in 1s
+  li
+    padding: 1.5rem
+    border-top: 3px solid transparent
+    margin-top: -3px
+    &:hover
+      border-top: 3px solid $main
+      transform: translate(0, 3px)
+
+.point
+  border: .08rem solid $trans-light-2
+  border-radius: 5px
+
+.list-extra
+  animation: fade-in 2s
+  li
+    padding: 1rem
+
+  a
+    color: lightgray
+
+.scrolled
+  background: $light
+
+  .point
+    border-color: $trans-dark-3
+
+  a
+    color: $dark
+
+.hero
+  +bg-dark
+  +flex-center
+  width: 100%
+  min-height: 100vh
+  background: url(../img/music3.jpg) no-repeat center fixed
+  background-size: cover
+
+.hero-content
+  padding-top: 2rem
+  color: $light
+  position: relative
+  +flex-center
+  flex-direction: column
+
+.hero-inner
+  writing-mode: vertical-lr
+
+.button-group
+  margin-top: 3rem
+
+.guide
+
+.container
+  max-width: 1200px
+
+.grid-lg
+  grid-row-end: span 2
+  grid-column-end: span 2
+
+.grid-ln
+  grid-column-end: span 2
+
+.gallery
+  display: grid
+  grid-gap: .5rem
+  grid-auto-flow: dense row
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-auto-rows: 200px
+
+.gallery-item
+  overflow: hidden
+  border-radius: 5px
+  position: relative
+
+  &:hover
+    img
+      transform: scale(1.1)
+      filter: brightness(.4)
+
+.gallery-img
+  width: 100%
+  height: 100%
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: .3s
+    filter: brightness(.6)
+
+.obj-bottom
+  img
+    object-position: bottom
+
+.gallery-content
+  +trans-center
+  color: $light
+  text-align: center
+  min-width: 250px
+
+  p
+    font-size: .9rem
+
+  h3
+    font-size: 1.5rem
+
+  h4
+    font-size: .9rem
+    color: lightgray
+
+
+.about
+  color: $light
+  background: url(../img/test.jpg) no-repeat center fixed
+  background-size: cover
+  +bg-dark
+  animation: fade-in 2s
+  display: none
+
+  &:target
+    display: block
+
+.about-content
+  display: flex
+  align-items: flex-start
+
+  .section-intro
+    margin: 2rem
+    writing-mode: vertical-lr
+
+.about-inner
+  max-width: 80%
+
+  h4
+    font-size: 1.5rem
+    padding: 2rem 0
+
+  h3
+    margin-top: 1rem 0
+    color: $main
+
+  p
+    text-indent: 1rem
+
+.pros
+  margin-top: 2rem
+  width: 100%
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.pro
+  padding: 2rem
+  border-radius: 5px
+  border: .08rem solid $trans-light-2
+  text-align: center
+  transition: .3s
+
+  &:hover
+    background: $trans-light-2
+
+.store
+
+.side
+  padding: 2rem
+  +shadow-light
+  border-top: 3px solid $dark
+  margin: 2rem 0
+  padding: 2rem
+
+  margin-right: -1rem
+  border-radius: 5px
+  width: 320px
+  background: white
+
+  h2
+    border-left: 3px solid $dark
+    margin-left: -2rem
+    padding-left: 2rem
+
+  li
+    padding: 1rem
+
+  a
+    padding: 1rem
+    margin: -1rem
+    color: $dark
+
+.type
+
+.win
+  li
+    position: relative
+    opacity: .5
+    transition: .3s
+    &:hover
+      opacity: 1
+
+  p
+    font-size: .9rem
+
+
+  h3
+
+    color: $main-2
+
+  h4
+    color: gray
+
+.shop-wrapper
+  width: 100%
+
+.shop-gallery
+
+  display: grid
+  grid-gap: 1rem
+  grid-auto-flow: dense row
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-auto-rows: 400px
+
+.shop-item
+  color: $dark
+  overflow: hidden
+  background: white
+  border-radius: 15px
+  position: relative
+  transition: .3s
+  &:hover
+    transform: scale(1.05)
+
+    img
+      &:nth-of-type(2)
+        opacity: 1
+
+.shop-img
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: bottom
+    transition: .3s
+
+    &:nth-of-type(2)
+      z-index: 10
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+.shop-content
+  z-index: 11
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  background: white
+  padding: .5rem
+
+  .price
+    font-size: .8rem
+
+  h3
+
+  h4
+    color: gray
+    font-size: .9rem
+
+.topic
+  position: relative
+  &::after
+    z-index: -10
+    content: ''
+    position: absolute
+    bottom: -150px
+    left: 0
+    width: 100%
+    height: 300px
+    background: white
+    border-radius: 50%
+    transform: scaleX(1.3)
+
+.topic-wrapper
+  display: flex
+
+.topic-item
+  overflow: hidden
+  position: relative
+  flex: 1
+  color: $light
+  text-align: center
+  margin: .5rem
+  border-radius: 5px
+
+  &:hover
+    .topic-hide
+      opacity: 1
+
+    .topic-content
+      opacity: 0
+
+    img
+      transform: scale(1.1)
+      filter: brightness(.4)
+
+.topic-img
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    filter: brightness(.7)
+    transition: .3s
+
+.topic-content
+  border: .08rem solid $light
+  padding: .5rem 1rem
+  +trans-center
+  transition: .3s
+
+  h2
+    white-space: nowrap
+
+.topic-hide
+  min-width: 280px
+  +trans-center
+  transition: .3s
+  opacity: 0
+
+.footer
+  background: white
+
+.footer-content
+  width: 100%
+  display: flex
+  padding: 2rem 4rem
+
+.footer-item
+  padding: 1rem
+  flex: 1
+  position: relative
+  transition: .3s
+
+  &:target
+    border: 1px solid $trans-dark-3
+    background: $trans-dark-4
+    margin: 1rem
+
+  li
+    padding: 1rem
+    transition: .3s
+
+  &:hover
+    h2
+      &::after
+        width: 20%
+
+  h2
+    position: relative
+    transition: .3s
+    margin-bottom: 2rem
+    padding-bottom: 1rem
+
+    &::after
+      display: inline-block
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 0
+      height: 3px
+      background: $dark
+      transition: .3s
+
+.footer-about
+  flex: 3
+
+  .logo
+    margin: 2rem 0
+
+    a
+      color: $dark
+
+  p
+    max-width: 400px
+
+  .social
+    li
+      display: inline-block
+
+    a
+      color: $dark
+      transition: .3s
+      &:hover
+        color: $main
+
+.footer-nav
+
+.footer-news
+  flex: 2
+
+.contact
+  background: white
+  padding: 0
+
+.side-choice
+
+  border: 0.08rem solid $trans-dark-3
+  position: relative
+  height: 400px
+  transition: .3s
+
+  &:hover
+    img
+      opacity: 1
+
+    .side-content
+      color: $light
+
+.side-img
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    filter: brightness(.6)
+    opacity: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: .3s
+
+.side-content
+  +trans-center
+  color: $dark
+  text-align: center
+
+  h2
+    font-size: 2.5rem
+
+  h3
+    font-size: .9rem
+
+.contact-form
+  background: url(../img/bg26.jpg)
+  background-size: cover
+  +bg-dark
+  color: $light
+  animation: fade-in 2s
+  display: none
+  &:target
+    display: block
+
+  form
+    max-width: 400px
+
+.footer-copyright
+  background: $dark
+  color: $light
+  text-align: center
+  padding: 2rem
+
+@import media
